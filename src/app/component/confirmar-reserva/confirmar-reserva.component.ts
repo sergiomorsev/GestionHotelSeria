@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 //import { Reserva } from './Reserva';
-import { ClienteService } from 'src/app/servicio/cliente.service';
+import { ClienteService } from '../../servicio/cliente.service';
 import { Cliente } from './cliente';
-import { UltimoPasoComponent } from 'src/app/component/ultimo-paso/ultimo-paso.component';
+//import { UltimoPasoComponent } from 'src/app/component/ultimo-paso/ultimo-paso.component';
 import {Reserva} from '../habitacion/reserva';
 import {ReservaService} from '../../servicio/reserva.service'
 

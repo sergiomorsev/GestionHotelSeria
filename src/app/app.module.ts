@@ -18,7 +18,7 @@ import { ActividadesComponent } from './component/actividades/actividades.compon
 import { ConfirmarReservaComponent } from './component/confirmar-reserva/confirmar-reserva.component';
 import { UltimoPasoComponent } from './component/ultimo-paso/ultimo-paso.component';
 import { PortadaAdministradorComponent } from './component/portada-administrador/portada-administrador.component';
-import { environment } from 'src/environments/environment'
+//import { environment } from 'src/environments/environment'
 import {EditarComponent} from './component/editar/editar.component'
 
 
@@ -38,11 +38,11 @@ import { AngularFireAuthModule } from 'angularfire2/auth'; */
 import { ReactiveFormsModule } from '@angular/forms';
 
 //servicios
-import { HeroesService } from 'src/app/servicio/habitacionTarje.service';
+import { HeroesService } from './servicio/habitacionTarje.service';
 import { ClienteService } from './servicio/cliente.service';
 //import { UserService } from 'src/app/servicio/user.service';
-import { HabitacionService } from 'src/app/servicio/habitacion.service';
-import {ReservaService} from 'src/app/servicio/reserva.service';
+import { HabitacionService } from './servicio/habitacion.service';
+import {ReservaService} from './servicio/reserva.service';
 import { variablesCliente } from './servicio/variables';
 import {variablesAdmin} from './servicio/variable.admin';
 import { AdministradorService } from './servicio/administrador.service';

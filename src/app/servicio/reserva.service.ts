@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
  // import { CLIENTES } from 'src/app/component/eliminar-huesped/reservas.json';
-import { Reserva } from 'src/app/component/habitacion/reserva';
+import { Reserva } from '../component/habitacion/reserva';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';

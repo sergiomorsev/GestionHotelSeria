@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Cliente, cliente } from "./cliente";
 
-import { ClienteService } from "src/app/servicio/cliente.service";
+import { ClienteService } from "../../servicio/cliente.service";
 import swal from "sweetalert2";
 @Component({
   selector: "app-eliminar-huesped",

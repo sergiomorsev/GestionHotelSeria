@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 //import { Heroe } from '../../interfaz/interefaz';
 import { Habitacion } from "../../component/add-habitacion/habitacion";
-import { HabitacionService } from "src/app/servicio/habitacion.service";
+import { HabitacionService } from "../../servicio/habitacion.service";
 
 @Component({
   selector: "app-habitaciones",

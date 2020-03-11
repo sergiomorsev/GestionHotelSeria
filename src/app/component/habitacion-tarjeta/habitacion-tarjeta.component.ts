@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Router } from "@angular/router";
 import { Habitacion } from "../../component/add-habitacion/habitacion";
-import { HabitacionService, Heroe } from "src/app/servicio/habitacion.service";
+import { HabitacionService, Heroe } from "../../servicio/habitacion.service";
 
 @Component({
   selector: "app-habitacion-tarjeta",

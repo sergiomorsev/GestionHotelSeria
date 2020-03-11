@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {Cliente} from 'src/app/component/confirmar-reserva/cliente'
+import {Cliente} from '../../component/confirmar-reserva/cliente'
 import { ClienteService } from "../../servicio/cliente.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import swal from "sweetalert2";

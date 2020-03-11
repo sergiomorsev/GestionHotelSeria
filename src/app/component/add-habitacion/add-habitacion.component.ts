@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HabitacionService} from 'src/app/servicio/habitacion.service'
+import {HabitacionService} from '../../servicio/habitacion.service'
 import { HabitacionComponent } from '../habitacion/habitacion.component';
-import {Habitacion} from 'src/app/component/add-habitacion/habitacion'
+import {Habitacion} from '../../component/add-habitacion/habitacion'
 import swal from 'sweetalert';
 @Component({
   selector: 'app-add-habitacion',

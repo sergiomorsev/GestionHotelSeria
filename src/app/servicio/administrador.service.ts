@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
  // import { CLIENTES } from 'src/app/component/eliminar-huesped/administradores.json';
-import { Administrador } from 'src/app/component/confirmar-reserva/administrador';
+import { Administrador } from '../component/confirmar-reserva/administrador';
 
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import {RegistroSesionComponent} from 'src/app/component/registro-sesion/registro-sesion.component'
+//import {RegistroSesionComponent} from 'src/app/component/registro-sesion/registro-sesion.component'
 
 
 @Injectable()

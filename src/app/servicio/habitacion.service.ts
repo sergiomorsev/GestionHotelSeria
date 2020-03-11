@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
 // import { CLIENTES } from 'src/app/component/eliminar-huesped/habitaciones.json';
-import { Habitacion } from "src/app/component/add-habitacion/habitacion";
+//import { Habitacion } from "src/app/component/add-habitacion/habitacion";
 import { Observable } from "rxjs";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { map } from "rxjs/operators";
-import { AddHabitacionComponent } from "src/app/component/add-habitacion/add-habitacion.component";
+//import { AddHabitacionComponent } from "src/app/component/add-habitacion/add-habitacion.component";
 
 @Injectable()
 export class HabitacionService {

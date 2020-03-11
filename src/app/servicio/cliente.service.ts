@@ -4,7 +4,7 @@ import { Cliente } from '../component/eliminar-huesped/cliente';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import {RegistroSesionComponent} from 'src/app/component/registro-sesion/registro-sesion.component'
+//import {RegistroSesionComponent} from 'src/app/component/registro-sesion/registro-sesion.component'
 
 
 @Injectable()

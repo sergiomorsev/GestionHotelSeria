@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import swal from 'sweetalert';
 import * as cardValidator from 'card-validator';
-import { ClienteService } from 'src/app/servicio/cliente.service';
+import { ClienteService } from '../../servicio/cliente.service';
 import { ConfirmarReservaComponent } from 'src/app/component/confirmar-reserva/confirmar-reserva.component';
 import { Router, Params } from '@angular/router';
 
 
-import { Cliente } from 'src/app/component/confirmar-reserva/cliente'
+import { Cliente } from '../../component/confirmar-reserva/cliente'
 
 import {ReservaService} from '../../servicio/reserva.service'
 import {Reserva} from '../habitacion/reserva';

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router, Params } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //import { Registro } from './Registro';
-import {ClienteService} from 'src/app/servicio/cliente.service';
-import {Cliente} from 'src/app/component/confirmar-reserva/cliente'
-import {ConfirmarReservaComponent} from 'src/app/component/confirmar-reserva/confirmar-reserva.component'
+import {ClienteService} from '../../servicio/cliente.service';
+import {Cliente} from '../../component/confirmar-reserva/cliente'
+//import {ConfirmarReservaComponent} from 'src/app/component/confirmar-reserva/confirmar-reserva.component'
 import swal from 'sweetalert';
 @Component({
   selector: 'app-registro-sesion',
