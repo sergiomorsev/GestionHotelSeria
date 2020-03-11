@@ -1,3 +1,28 @@
 .margenes{
     margin:10px;
 }
+
+.column {
+    grid-column: 1/2;
+    grid-row: 1/1;
+   
+  }
+  .color2 {
+    color: #990033;
+
+   
+}
+button.color2:hover {
+    background: #F73E51;
+}
+button.color1 {
+    border: 1px solid #990033;
+    color: #fff;
+    background: #990033;
+    padding: 20px 20px;
+    border-radius: 3px;
+   
+}
+button.color2:hover {
+    background: #F73E51;
+}

@@ -3,20 +3,21 @@
   <div class="row">
     <div class="col-5">
       <div class="borde">
-        <p class="margenes"><strong>Entrada</strong></p>
-        <p class="margenes">(Tiene que salir cuando entra el huesped)</p>
-        <p class="margenes">Horario:<br>13:30 - 00:00</p>
+        <p class="margenes"><strong style="font-size: large;">Entrada</strong></p>
+        <p class="margenes"><strong>Fecha: </strong><strong class="color2 derecha"> 10/12/2019</strong></p>
+        <p class="margenes"><strong>Horario:</strong><strong class="color2 derecha">13:30 - 00:00</strong></p>
         <div class="borde4">
-          <p class="margenes "><strong>Salida</strong></p>
-          <p class="margenes">dia de salida(miercoles,jueves etc)</p>
-          <p class="margenes">a las 12:00</p>
+          <p class="margenes "><strong style="font-size: large;">Salida</strong></p>
+          <p class="margenes"><strong>Fecha: </strong><strong class="color2 derecha">16/12/2019</strong></p>
+          <p class="margenes"><strong>Hora de salida: </strong><strong class="color2 derecha">06:00 - 12:00</strong></p>
         </div>
       </div>
       <div class="borde">
-        <p class="margenes">din de la habitacion</p>
-        <p class="margenes">% Iva:</p>
+        <p class="margenes"><strong>Habitacion seleccionada: </strong><strong class="color2 derecha">SUITE
+            ROYAL</strong></p>
+        <p class="margenes"><strong>% Iva:</strong><strong class="derecha">21%</strong></p>
         <div class="borde1">
-          <p class="margenes">precio total: </p>
+          <p class="margenes"><strong>precio total:</strong> <strong class="color2 derecha">181€</strong></p>
         </div>
       </div>
       <div class="borde">
@@ -43,15 +44,15 @@
       </div>
     </div>
     <div class="formulario col-6 borde3">
-      <form #formUltimo="ngForm" (ngSubmit)="onSubmit();">
+      <form #formUltimo="ngForm" (ngSubmit)="onSubmit();" style="width: 100%;">
         <!--(ngReset)="formDatosUsuario.reset();"-->
 
         <h2 class="margenes">Tus datos</h2>
         <div class="row">
-          <p><strong>Nombre:</strong> (tiene que salir el nombre de la pagina anterior)</p>
+          <p><strong class="nombreMargin">Nombre:</strong> <strong class="color2">Sergio</strong></p>
         </div>
         <div class="row">
-          <p><strong>E-mail:</strong>(tiene que salir el correo de la pagina anterior)</p>
+          <p><strong class="nombreMargin">E-mail:</strong> <strong class="color2">sergiomorsev1@gmail.com</strong></p>
         </div>
         <div class="borde1">
           <h2 class="margenes">Garantía de la reserva</h2>
@@ -61,75 +62,21 @@
             <div class="row">
               <p>
                 <label> <strong>Nº de la tarjeta de credito: </strong></label>
-                <input class="hola margenes" #cardNumber name="cardNumber" #cardNumber="ngModel" [(ngModel)]="ultimo.cardNumber"
-                  [textMask]="mask" type="text" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" maxlength="90" (keyup)="updateCard()" placeholder="xxxx-xxxx-xxxx-xxxx">
-                <!-- <i class="card ccs ccs-{{type?.card?.type}}"></i> --><br>
-                <span *ngIf="cardNumber.touched && !cardNumber.valid" class="error texto">
-                    ¡Introduce un Nombre, por favor(solo letras)!
-                  </span>
-                
-              </p>
-              <p class="margenes">
-                <label><strong>Tipo de tarjeta: </strong></label>
-                <select id="mesnacimiento" class="margen1">
-                  <option value disabled selected>Seleccionar</option>
-                  <option value="1">Visa</option>
-                  <option value="2">Euro/Mastercard</option>
-                  <option value="3">Maestro</option>
-                </select>
+                <input class="hola margenes" #tarjeta name="tarjeta" #tarjeta="ngModel" [(ngModel)]="cliente2.tarjeta"
+                  [textMask]="mask" type="text" required pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" maxlength="90"
+                  (keyup)="updateCard()" placeholder=" xxxx-xxxx-xxxx-xxxx">
+                <br>
+                <span *ngIf="tarjeta.touched && !tarjeta.valid" class="error texto">
+                  ¡Introduce correctamente el serial de la tarjeta!
+                </span>
+
               </p>
             </div>
           </div>
-          <div class="row">
-            <p class="margenes">
-              <label> <strong>Mes de caducidad:</strong> </label>
-              <select id="mesnacimiento" class="margen1 cuadro">
-                <option value disabled selected>Seleccionar</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-              </select>
-            </p>
-            <p class="margenes">
-              <label><strong>Año:</strong> </label>
-              <select id="mesnacimiento" class="margen1 cuadro">
-                <option value disabled selected>Seleccionar</option>
-                <option value="1">2019</option>
-                <option value="2">2020</option>
-                <option value="3">2021</option>
-                <option value="4">2022</option>
-                <option value="5">2023</option>
-                <option value="6">2024</option>
-                <option value="7">2025</option>
-                <option value="8">2026</option>
-                <option value="9">2027</option>
-                <option value="10">2028</option>
-                <option value="11">2029</option>
-                <option value="12">2030</option>
-              </select>
-            </p>
-          </div>
-          <div class="row">
-            <p>
-              <input type="checkbox" id="condiciones">
-              <label style="color:black">Al hacer la reserva estás aceptando las condiciones generales.</label>
-
-
-            </p>
-          </div>
         </div>
-        <button (click)="envio()" routerLinkActive="active" type="submit" class="letra color1 color2 prueba" [routerLink]="['/resumen']" [disabled]="!formUltimo.form.valid"> Último paso</button>
       </form>
-          
+      <button routerLinkActive="active" type="submit" class="letra color1 color2 prueba"
+        (click)='envio()' [disabled]="!formUltimo.form.valid"> Último paso</button>
 
     </div>
 

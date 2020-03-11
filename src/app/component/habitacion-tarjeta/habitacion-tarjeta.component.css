@@ -1,0 +1,60 @@
+/* .medio{
+    text-align: center;
+    float:center;
+}
+div{
+    margin:10px;
+} */
+/* .column {
+    float: left;
+    width: 100%;
+  }
+
+.todo {
+    width: 100%;
+}
+.margin {
+    margin-top:50px;
+} */
+.margin {
+    margin: 20px;
+}
+.color{
+    background: #990033;
+    text-align: center;
+    
+}
+.color1{
+    background: #ffffff;
+    text-align: center;
+}
+.margenCalendario{
+    margin: 0px 50px;
+}
+.color2{
+   color: #ffffff;
+   text-align: center;
+}
+button.color1 {
+    border: 1px solid #990033;
+    color: #fff;
+    background: #990033;
+    padding: 5px 5px;
+    border-radius: 2px;
+   
+}
+button.color2:hover {
+    background: #F73E51;
+}
+.otro {
+    flex: 1.3334;
+}
+
+/* .tipo {
+   font-family: "Trebuchet MS", bold ; 
+} */
+
+.sombra {
+    box-shadow: 4px 4px grey;
+    
+}

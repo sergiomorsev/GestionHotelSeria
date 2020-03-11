@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GestionHotel';
+
+  // cargarNavbars(mensaje){
+  //   this.title = mensaje;
+  // }
 }

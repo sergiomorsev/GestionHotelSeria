@@ -3,86 +3,107 @@
   <div class="row">
     <div class="col-5">
       <div class="borde">
-        <p class="margenes"><strong>Entrada</strong></p>
-        <p class="margenes">(Tiene que salir cuando entra el huesped)</p>
-        <p class="margenes">Horario:<br>13:30 - 00:00</p>
+        <p class="margenes" style="font-size: 20px;"><strong>Entrada</strong></p>
+        <p class="margenes"> <strong>Fecha: </strong> <strong class="color2 derecha"> 10/12/2019 </strong></p>
+        <p class="margenes"><strong>Horario:</strong> <strong class="color2 derecha"> 13:30 - 00:00 </strong></p>
         <div class="borde4">
-          <p class="margenes "><strong>Salida</strong></p>
-          <p class="margenes">dia de salida(miercoles,jueves etc)</p>
-          <p class="margenes">a las 12:00</p>
+          <p class="margenes" style="font-size: 20px;"><strong>Salida</strong></p>
+          <p class="margenes"> <strong>Fecha: </strong><strong class="color2 derecha"> 16/12/2019</strong></p>
+          <p class="margenes"><strong>Hora de salida:</strong> <strong class="color2 derecha"> 06:00 - 12:00</strong> </p>
         </div>
       </div>
       <div class="borde">
-        <p class="margenes">nombre de la habitacion</p>
-        <p class="margenes">% Iva:</p>
+        <p class="margenes"><strong>Habitacion seleccionada: </strong><strong class=" derecha color2"> SUITE ROYAL</strong></p>
+        <p class="margenes"><strong>% Iva:</strong> <strong class="derecha">21%</strong></p>
         <div class="borde1">
-          <p class="margenes">precio total: </p>
+          <p class="margenes"><strong>Precio total:</strong> <strong class="color2 derecha">181€</strong> </p>
         </div>
       </div>
       <div class="borde">
         <div class="row">
-          <img src="assets/img/reloj.PNG"/>
+          <img src="assets/img/reloj.PNG" />
           <h4 class="margenes">¡Ya casi estás!</h4>
         </div>
-          <p class="margenes2">Solo necesitamos unos datos más para confirmar tu<br> reserva en Carolse.</p>
-        
+        <p class="margenes2">Solo necesitamos unos datos más para confirmar tu<br> reserva en Carolse.</p>
+
       </div>
       <div class="borde">
         <div class="row">
-          <img src="assets/img/monedas.PNG"/>
-        <h4 class="margenes">¡Sin sorpresas!</h4>
-      </div>
+          <img src="assets/img/monedas.PNG" />
+          <h4 class="margenes">¡Sin sorpresas!</h4>
+        </div>
         <p class="margenes2">El precio que ves es el que pagas. ¡Sin gastos de gestión!</p>
       </div>
       <div class="borde">
         <div class="row">
-          <img src="assets/img/candado.PNG" class="tamaño"/>
-        <h4 class="margenes">Tu reserva es segura</h4>
-      </div>
+          <img src="assets/img/candado.PNG" class="tamaño" />
+          <h4 class="margenes">Tu reserva es segura</h4>
+        </div>
         <p class="margenes2">Tus datos están protegidos por una conexión segura.</p>
       </div>
     </div>
     <div class="formulario col-6 borde3">
-      <form #formReserva="ngForm" (ngSubmit)="onSubmit();">
+      <form #formCliente="ngForm" (ngSubmit)="onSubmit();" style="width: 100%;">
         <!--(ngReset)="formDatosUsuario.reset();"-->
 
         <h2 class="margenes">Rellena los datos</h2>
-        <div class="row">
+        <div class="columnas1">
           <p>
-            <label> <strong>NOMBRE:</strong></label>
-            <input class="hola margenes" size="30" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="reserva.nombre"
-              required required pattern="[a-z A-Z]+">
+            <label> <strong class="textSpace">NOMBRE:</strong></label>
+            <input  size="30" type="text" name="nombre" #nombre="ngModel"
+              [(ngModel)]="cliente.nombre" required required pattern="[a-z A-Z]+">
             <br>
             <span *ngIf="nombre.touched && !nombre.valid" class="error texto">
               ¡Introduce un Nombre, por favor(solo letras)!
             </span>
           </p>
           <p>
-            <label> <strong>APELLIDO:</strong> </label>
-            <input class="hola margenes" size="30" type="text" name="apellido" #apellido="ngModel" [(ngModel)]="reserva.apellido"
-              required pattern="[a-z A-Z]+">
+            <label> <strong class="textSpace">APELLIDO:</strong> </label>
+            <input size="30" type="text" name="apellido" #apellido="ngModel"
+              [(ngModel)]="cliente.apellido" required pattern="[a-z A-Z]+">
             <br>
             <span *ngIf="apellido.touched && !apellido.valid" class="error texto">
               ¡Introduce un apellido, por favor(solo letras)!
             </span>
           </p>
-        </div>
-        <div class="row">
+
+  
           <p>
-            <label> <strong>CORREO:</strong> </label>
-            <input class="hola margenes" size="30" type="correo" name="correo" #correo="ngModel" [(ngModel)]="reserva.correo"
-              required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <label> <strong class="textSpace">CORREO:</strong> </label>
+            <input  size="30" type="email" name="email" #email="ngModel"
+              [(ngModel)]="cliente.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             <br>
-            <span *ngIf="correo.touched && !correo.valid" class="error texto">
+            <span *ngIf="email.touched && !email.valid" class="error texto">
               ¡Introduce un email, por favor. Ejemplo: ejemplo@gmail.com!
             </span>
           </p>
+      
           <p>
-            <label><strong>CORREO2:</strong> </label>
-            <input class="hola margenes" size="30" type="text" name="correo2" #correo2="ngModel" [(ngModel)]="reserva.correo2"
+            <label> <strong class="textSpace">CONTRASEÑA:</strong> </label>
+            <input size = "30" type="password" name="codigo"
+              #codigo="ngModel" [(ngModel)]="cliente.codigo" required pattern="[a-z A-Z0-9]+">
+            <span *ngIf="codigo.touched && !codigo.valid" class="error">
+              ¡Introduce una codigo, por favor(solo letras)!
+            </span>
+          </p>
+
+          <p>
+            <label> <strong class="textSpace">TELEFONO:</strong> </label>
+            <input size="30" type="text" name="telefono" #telefono="ngModel"
+              [(ngModel)]="cliente.telefono" required pattern="[6][0-9]{8}">
+            <br>
+            <span *ngIf="telefono.touched && !telefono.valid" class="error texto">
+              ¡Introduce un numero de telefono por favor que empiece por 6!
+            </span>
+          </p>
+        </div>
+        
+          <!-- <p>
+            <label><strong>CONFIRMAR EMAIL:</strong> </label>
+            <input class="hola margenes" size="30" type="text" name="email2" #email2="ngModel" [(ngModel)]="cliente.email2"
               required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             <br>
-            <span *ngIf="correo2.touched && !correo2.valid"  class="error texto">
+            <span *ngIf="email2.touched && !email2.valid"  class="error texto">
               ¡Tiene que ser identico al anterior apartado!
             </span>
           </p>
@@ -90,19 +111,20 @@
         <div class="row center">
           <p>
             <label> <strong>TELEFONO:</strong></label>
-            <input class="hola margenes" size="30" type="text" name="telefono" #telefono="ngModel" [(ngModel)]="reserva.telefono"
+            <input class="hola margenes" size="30" type="text" name="telefono" #telefono="ngModel" [(ngModel)]="cliente.telefono"
               required pattern="[6][0-9]{8}">
             <br>
             <span *ngIf="telefono.touched && !telefono.valid" class="error">
               ¡Introduce un telefono, por favor(empezando por el dígito 6)!
             </span>
-          </p>
-        </div>
+          </p>-->
+        
 
       </form>
-      
-          <button routerLinkActive="active" type="submit" class="letra color1 color2 prueba" [routerLink]="['/ultimoPaso']" [disabled]="!formReserva.form.valid"> Último paso</button>
-        
+
+      <button routerLinkActive="active" type="submit" class="letra color1 color2 prueba" [routerLink]="['/ultimoPaso']"
+        (click)='callall()' [disabled]="!formCliente.form.valid"> Último paso</button>
+
     </div>
   </div>
 </div>

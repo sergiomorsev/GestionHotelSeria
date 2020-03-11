@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgbDate, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, Validators } from '@angular/forms';
-
-import { HeroesService } from '../../servicio/habitacion.service';
+import { ReservaService } from 'src/app/servicio/reserva.service';
+import { Reserva } from 'src/app/component/habitacion/reserva';
+//import { HabitacionTarjetaComponent } from '../habitacion-tarjeta/habitacion-tarjeta.component';
+import { HeroesService } from '../../servicio/habitacionTarje.service';
+//import { Reserva } from '../habitacion/reserva';
+import { Habitacion } from '../add-habitacion/habitacion';
+import {HabitacionService} from '../../servicio/habitacion.service'
 @Component({
   selector: 'app-habitacion',
   templateUrl: './habitacion.component.html',
@@ -29,10 +34,35 @@ import { HeroesService } from '../../servicio/habitacion.service';
 `
   ],
 })
-export class HabitacionComponent {
+export class HabitacionComponent implements OnInit {
+ 
+ public  habitaciones2 :  Habitacion = new Habitacion()
 
+  public reserva: Reserva = new Reserva()
+  public habitacion: Habitacion = new Habitacion()
 
-  heroe: any = {};
+  ngOnInit() {
+   /*  this.habitacionService.getHabitacion(this.habitacion.id)
+    .subscribe(habitacion => {
+      console.log(habitacion);
+      this.habitaciones2 = habitacion;
+    });
+this.cargarHabitacion(); */
+  }
+  cargarHabitacion(): void{
+/*     this.activatedRoute.params.subscribe(params => {
+      let id = params['id']
+      if(id){
+        this.habitacionService.getHabitacion(id).subscribe( (habitacion) => this.habitacion = habitacion)
+      }
+    }) */
+  }
+  /*  this.clienteService.getCliente2()
+   .subscribe(cliente => {
+     console.log(cliente);
+     this.cliente2 = cliente;
+     console.log(this.cliente2.nombre);
+   }); */
   //calendario
   hoveredDate: NgbDate;
 
@@ -40,17 +70,15 @@ export class HabitacionComponent {
   toDate: NgbDate;
   constructor(private activatedRoute: ActivatedRoute,
     private _heroesService: HeroesService,
-    calendar: NgbCalendar
+    calendar: NgbCalendar,
+    private reservaService: ReservaService,
+    //private habitacionTarjeta:HabitacionTarjetaComponent,
+    private habitacionService: HabitacionService
+ 
   ) {
     this.fromDate = calendar.getToday();
+
     this.toDate = calendar.getNext(calendar.getToday());
-
-
-    this.activatedRoute.params.subscribe(params => {
-      this.heroe = this._heroesService.getHeroe(params['id']);
-      // console.log(this.heroe);
-    });
-
   }
   onDateSelection(date: NgbDate) {
     if (!this.fromDate && !this.toDate) {
@@ -61,6 +89,8 @@ export class HabitacionComponent {
       this.toDate = null;
       this.fromDate = date;
     }
+    /*  console.log(this.fromDate);
+     console.log(this.toDate); */
   }
 
   isHovered(date: NgbDate) {
@@ -74,6 +104,42 @@ export class HabitacionComponent {
   isRange(date: NgbDate) {
     return date.equals(this.fromDate) || date.equals(this.toDate) || this.isInside(date) || this.isHovered(date);
   }
-  //fin calendario
 
+  //fin calendario
+  /* fecha() {
+    this.reservaService.create(this.reserva)
+      .subscribe(Reserva => {
+
+      }
+
+      );
+      console.log(this.fromDate);
+      console.log(this.toDate);
+  }
+   */
+  fecha() {
+    
+    var d = this.fromDate.day;
+    var m = this.fromDate.month;
+    var y = this.fromDate.year;
+    let fecha_entrada1 = d + "-" + m + "-" + y;
+    this.reserva.fecha_entrada = fecha_entrada1
+    console.log(fecha_entrada1)
+
+    var d2 = this.toDate.day;
+    var m2 = this.toDate.month;
+    var y2 = this.toDate.year;
+    let fecha_salida1 = d2 + "-" + m2 + "-" + y2;
+    this.reserva.fecha_salida = fecha_salida1;
+    console.log(fecha_salida1)
+
+    this.reservaService.create(this.reserva)
+      .subscribe(reserva => {
+
+      }
+
+      );
+  }
 }
+
+

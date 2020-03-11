@@ -26,10 +26,40 @@ margin:30px 40px
         padding: 0 4px 0 4px;
         
 }
-.color{
+
+.prueba{
+    font:  bold 120% sans-serif;
+}
+input.color1 {
+    border: 1px solid #990033;
+    color: #fff;
+    background: #990033;
+    padding: 20px 20px;
+    border-radius: 3px;
     -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
         border-radius: 10px;
         padding: 0 4px 0 4px;
         width:150px; height:40px;
+   
 }
+input.color2:hover {
+    background: #F73E51;
+}
+input.letra[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+  button[disabled]:hover{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+  .error{
+    color: red;
+  }
+  .marginn {
+      margin-top: 100px;
+      margin-bottom: 30px;
+  }

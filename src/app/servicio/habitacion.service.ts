@@ -1,75 +1,90 @@
+import { Injectable } from "@angular/core";
+// import { CLIENTES } from 'src/app/component/eliminar-huesped/habitaciones.json';
+import { Habitacion } from "src/app/component/add-habitacion/habitacion";
+import { Observable } from "rxjs";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { map } from "rxjs/operators";
+import { AddHabitacionComponent } from "src/app/component/add-habitacion/add-habitacion.component";
 
-import { Injectable } from '@angular/core';
-import { Heroe } from '../interfaz/interefaz';
-import { HEROES } from '../data/ArrayHabitaciones';
 @Injectable()
-export class HeroesService {
-  private DatosHeroes: Heroe[];
-  constructor() {
-    this.DatosHeroes = HEROES;
-    console.log("Servicio listo para usar!!!");
-  }
-
-
-  getHeroes(): Heroe[] {
-    return this.DatosHeroes;
-  }
-
-  getHeroe(idx: string) {
-    return this.DatosHeroes[idx];
-  }
-
-  buscarHeroes(termino: string): Heroe[] {
-
-    let heroesArr: Heroe[] = [];
-    termino = termino.toLowerCase();
-
-    for (let i = 0; i < this.DatosHeroes.length; i++) {
-
-      let heroe = this.DatosHeroes[i];
-
-      let nombre = heroe.nombre.toLowerCase();
-
-      if (nombre.indexOf(termino) >= 0) {
-        heroe.idx = i;
-        heroesArr.push(heroe)
-      }
-
+export class HabitacionService {
+ private heroes:Heroe[] = [
+    {
+      id:1,
+      nombre: "Suite Prenium",
+      bio: "Suite de 1 dormitorio(s), Camas: 1 Grande, Vista a la ciudad",
+      img: "assets/img/habitacion.jpg",
+      precio: 150
+    },
+    {
+      id:2,
+      nombre: "Suite presidencial",
+      bio: "Camas: 1 Grande,Vistas a la Giralda",
+      img: "assets/img/habitacion2.jpg",
+      precio: 150
+    },
+    {
+      id:3,
+      nombre: "Suite Grand",
+      bio:
+        "Suite de 1 dormitorio(s), Camas: 1 Grande, Vista a la ciudad, Terraza",
+      img: "assets/img/habitacion3.jpg",
+      precio: 150
+    },
+    {
+      id:4,
+      nombre: "Suite Royal",
+      bio:
+        "Suite de 1 dormitorio(s), Camas: 1 Grande, Vista a la ciudad, Terraza",
+      img: "assets/img/habitacion4.jpg",
+      precio: 150
+    },
+    {
+      id:5,
+      nombre: "Habitacion Deluxe",
+      bio: "Suite de 1 dormitorio(s), Camas: 2 pequeñas, Vista a la ciudad",
+      img: "assets/img/habitacion.jpg",
+      precio: 150
+    },
+    {
+      id:6,
+      nombre: "Habitacion Estándar",
+      bio:
+        "Suite de 1 dormitorio(s), Camas: 2 Pequeñas, Vista a la ciudad, Baño compartido",
+      img: "assets/img/habitacion2.jpg",
+      precio: 150
+    },
+    {
+      id:7,
+      nombre: "Habitacion Gran Deluxe",
+      bio: "Suite de 1 dormitorio(s), Camas: 2 Pequeñas, Vista a la giralda",
+      img: "assets/img/habitacion3.jpg",
+      precio: 150
+    },
+    {
+      id:8,
+      nombre: "Habitacion",
+      bio: "",
+      img: "assets/img/habitacion.jpg",
+      precio: 150
     }
+  ];
 
-    return heroesArr;
-
+  constructor() {
+    console.log("que pasa gente");
   }
-  // getProducts()
-  // {
-  //   return this.productList = this.firebase.list('products');
-  // }
 
-  // insertProduct(product: Product)
-  // {
-  //   this.productList.push({
-  //     name: product.name,
-  //     category: product.category,
-  //     location: product.location,
-  //     price: product.price
-  //   });
-  // }
-
-  // updateProduct(product: Product)
-  // {
-  //   this.productList.update(product.$key, {
-  //     name: product.name,
-  //     category: product.category,
-  //     location: product.location,
-  //     price: product.price
-  //   });
-  // }
-
-  // deleteProduct($key: string)
-  // {
-  //   this.productList.remove($key);
-  // }
-
+  getHeroes() {
+    return this.heroes;
+  }
+  
 }
-
+export interface Heroe{
+  id:number
+  nombre: string;
+  bio: string;
+  img: string;
+  precio:number;
+  idx?: number;
+};
 

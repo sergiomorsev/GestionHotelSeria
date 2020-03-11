@@ -24,3 +24,35 @@ button.color1 {
 button.color2:hover {
   background: #F73E51;
 }
+body {
+  height: 100%;
+}
+.final {
+  position: absolute;
+  right: 0;
+  margin-right: 200px;
+ 
+}
+.final2 {
+
+
+
+  align-content:center;
+  
+ 
+}
+button.color1[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+button.color2[disabled]:hover{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.error{
+  margin-left: 5px;
+  color:red;
+}

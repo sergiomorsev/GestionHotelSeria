@@ -1,76 +1,77 @@
-<h1 class="animated fadeIn">{{ heroe.nombre | uppercase }} </h1>
-<hr>
+<!-- <h1 class="animated fadeIn">{{ habitacion2.nombre | uppercase }} </h1> -->
+<div style="margin:20px; width: 100%;">
+  <hr>
+  <h1>Suite Royal</h1>
+  <div class="row animated fadeIn fast">
 
-<div class="row animated fadeIn fast">
+    <div class="col-md-4">
 
-  <div class="col-md-4">
+      <!--   <img [src]="habitacion2.img" class="img-fluid" [alt]="habitacion2.nombre"> -->
+      <img src="assets/img/habitacion.jpg" class="img-fluid">
+      <br><br>
+      <h1>150€</h1>
+      <a [routerLink]="['/habitaciones']" class="btn btn-outline-danger btn-block">Regresar</a>
 
-    <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
-    <br><br>
-    <a [routerLink]="['/habitaciones']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
 
-  </div>
+    <div class="col-md-8">
 
-  <div class="col-md-8">
-    <h3>{{ heroe.nombre }}</h3>
-    <hr>
-    <p>
+
+      <!-- <p>
       {{ heroe.bio }}
-    </p>
-    <div>
-      <img *ngIf="heroe.casa == 'Marvel'" class="img-logo" src="assets/img/marvel-logo.png" alt="DC">
-      <img *ngIf="heroe.casa == 'DC'" class="img-logo" src="assets/img/dc-logo.jpg" alt="Marvel">
-    </div>
-    <div class="margenCalendario">
-      <table class="a" cellspacing="0" cellpadding="2">
-        <div class="color">
-          <tr>
-            <td><b>
-                <p class="color2">Escoge una fecha</p>
-              </b></td>
+    </p> -->
+      <div>
+        <!--  <img *ngIf="heroe.casa == 'Marvel'" class="img-logo" src="assets/img/marvel-logo.png" alt="DC">
+      <img *ngIf="heroe.casa == 'DC'" class="img-logo" src="assets/img/dc-logo.jpg" alt="Marvel"> -->
+      </div>
+      <div class="margenCalendario">
+        <table class="a" cellspacing="0" cellpadding="2">
+          <div class="color">
+            <tr>
+              <td><b>
+                  <p class="color2">Escoge una fecha</p>
+                </b></td>
+            </tr>
+          </div>
+          <tr class="color">
+            <td>
+              <table class="a" cellspacing="0" cellpadding="4">
+                <tr class="color1">
+                  <td>
+
+
+                    <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t"
+                      outsideDays="hidden">
+                    </ngb-datepicker>
+
+                    <ng-template #t let-date let-focused="focused">
+                      <span class="custom-day" [class.focused]="focused" [class.range]="isRange(date)"
+                        [class.faded]="isHovered(date) || isInside(date)" (mouseenter)="hoveredDate = date"
+                        (mouseleave)="hoveredDate = null">
+                        {{ date.day }}
+
+                      </span>
+                    </ng-template>
+                  </td>
+                </tr>
+              </table>
+            </td>
           </tr>
-        </div>
-        <tr class="color">
-          <td>
-            <table class="a" cellspacing="0" cellpadding="4">
-              <tr class="color1">
-                <td>
-  
-  
-                  <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t"
-                    outsideDays="hidden">
-                  </ngb-datepicker>
-  
-                  <ng-template #t let-date let-focused="focused">
-                    <span class="custom-day" [class.focused]="focused" [class.range]="isRange(date)" [class.faded]="isHovered(date) || isInside(date)"
-                      (mouseenter)="hoveredDate = date" (mouseleave)="hoveredDate = null">
-                      {{ date.day }}
-                      
-                    </span>
-                  </ng-template>
-  
-                  <hr>
-  
-                  <!--<pre>From: {{ fromDate | json }} </pre>
-  <pre>To: {{ toDate | json }} </pre>-->
-  
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
+        </table>
+        <!-- <pre>From: {{ fromDate | json }} </pre>
+      <pre>To: {{ toDate | json }} </pre> -->
+      </div>
+
+
     </div>
-
-
   </div>
-</div>
-<!-- <ul class="navbar-nav ml-auto">
+  <!-- <ul class="navbar-nav ml-auto">
   <li class="nav-item pull-left" routerLinkActive="active">
     <a class="nav-link" [routerLink]="['/confirmarReserva']"><button class="boton letra"><img src="assets/img/calendar.png" class="margen"/>Seleccionar</button></a>
   </li>
 </ul> -->
-<br>
-
-    
-      <button routerLinkActive="active" class="letra color1 color2 prueba" [routerLink]="['/confirmarReserva']">Confirmar la reserva</button>
+  <br>
+  <button routerLinkActive="active" class="letra color1 color2 prueba"  [routerLink]="['/confirmarReserva']"
+    (click)="fecha()">Confirmar la
+    reserva</button>
+</div>

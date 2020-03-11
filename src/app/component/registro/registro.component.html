@@ -1,18 +1,58 @@
-<div>
+<!-- <div>
   <form #formLogin="ngForm" (ngSubmit)="onSubmit(); formLogin.reset();" class="medio">
     <h2>Iniciar sesión</h2>
     <p>
       <label> <strong>Correo electrónico:</strong></label><br>
-      <input  class="hola" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="login.nombre" required>
+      <input class="hola" type="text" name="email" #nombre="ngModel" [(ngModel)]="login.nombre" required>
 
     </p>
     <p>
       <label><strong>Contraseña:</strong> </label><br>
       <input class="hola" type="text" name="pass" #pass="ngModel" [(ngModel)]="login.pass" required>
 
-    </p>
+    </p> -->
+<!-- <app-root (registro)="cargarNavbars($event)"></app-root> -->
 
-    <input class="color" type="submit" value="Login" [routerLink]="['/admin']" [disabled]="!formLogin.form.valid">
+
+<!-- <input class="color" type="submit" value="Login" [routerLink]="['/resumen']" [disabled]="!formLogin.form.valid"> -->
+<!-- <app-navbar3 *ngIf="title == 'navbar2'" ></app-navbar3>
+      <app-navbar2 *ngIf="title != 'navbar3'"></app-navbar2> -->
+<!-- <div *ngIf="navbar3">
+      hola
+      <app-navbar3></app-navbar3>
+    </div>
+  
+
   </form>
 
+</div> -->
+
+
+<div>
+  <div [hidden]="oculto">
+    <div>
+      <form [formGroup]="loginForm" class="medio marginn">
+        <p>
+          <label> <strong>Correo electrónico:</strong></label><br>
+          <input id = "email" class="hola" type="email" formControlName="email">
+
+        </p>
+        <p>
+          <label><strong>Contraseña:</strong> </label><br>
+          <input id = "pass" #codigo class="hola " type="password" formControlName="password" (keyup)="onKeyUp(codigo.value)">
+          <label class="error">{{errorMessage}}</label>
+
+        </p>
+        <input class="letra color1 color2 prueba" (click)="login()" type="submit" value="Login"
+          [disabled]="!loginForm.valid">
+      </form>
+      <p class="maginn" style="text-align: center;">¿No tienes cuenta aún? <a [routerLink]="['/Registro']">Crear aquí</a></p>
+    </div>
+  </div>
+  <div [hidden]="!oculto">
+    <app-navbar3></app-navbar3>
+  </div>
+  <div [hidden]="oculto" class="col-md-4 col-md-offset-4">
+   <!--  <p style="text-align: center;">¿No tienes cuenta aún? <a [routerLink]="['/Registro']">Crear aquí</a></p> -->
+  </div>
 </div>

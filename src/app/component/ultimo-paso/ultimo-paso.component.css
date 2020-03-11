@@ -115,3 +115,27 @@ select.cuadro{
     width: 45px;
     margin:10px 0px 0px 30px
 }
+.color2 {
+    color: #990033;
+
+   
+}
+.derecha {
+     float: right;
+}
+.nombreMargin {
+    margin-right: 6px;
+}
+.negritas {
+    font-weight: bold;
+}
+button.color1[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+  button.color2[disabled]:hover{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }

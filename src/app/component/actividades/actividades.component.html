@@ -1,11 +1,13 @@
 <div class="margenes">
   <h3 style="text-align: center" class="margen titulo">Actividades</h3>
-  <h5 style="text-align: center" class="color">Estas vacaciones, viva momentos refrescantes y llenos de emoción: piscinas, deportes,
+  <h5 style="text-align: center" class="color">Estas vacaciones, viva momentos refrescantes y llenos de emoción:
+    piscinas, deportes,
     excursiones, juegos… ¡y mucho más!</h5>
 </div>
 <div class="margenes">
   <h3 style="text-align: center" class="margen titulo">Piscinas</h3>
-  <h5 style="text-align: center" class="color">Todo un mundo acuático a su disposición: piscina exterior tematizada con jacuzzi,
+  <h5 style="text-align: center" class="color">Todo un mundo acuático a su disposición: piscina exterior tematizada con
+    jacuzzi,
     piscina cubierta climatizada con jacuzzi (cerrada en temporada alta), piscina de niños, servicio de hamacas y
     toallas* en la piscina y socorrista.</h5>
 </div>
@@ -23,7 +25,8 @@
 </div>
 <div class="margenes">
   <h3 style="text-align: center" class="margen titulo">Deportes</h3>
-  <h5 style="text-align: center" class="color">Padel-Day: jornadas y campeonatos de pádel en las recientemente inauguradas
+  <h5 style="text-align: center" class="color">Padel-Day: jornadas y campeonatos de pádel en las recientemente
+    inauguradas
     instalaciones frente al hotel y mas hoteles.</h5>
 </div>
 <section class="SectionColumnasImg">
@@ -40,35 +43,50 @@
 </section>
 <div class="margenes">
   <h3 style="text-align: center" class="margen titulo">Excursiones</h3>
-  <h5 style="text-align: center" class="color">Descubra Sevilla y su entorno. Muy cerca encontrará: Parque acuático Aquapark
+  <h5 style="text-align: center" class="color">Descubra Sevilla y su entorno. Muy cerca encontrará: Parque acuático
+    Aquapark
     (Sevilla) y Parque temático Isla magica.</h5>
 </div>
 <div class="margenes">
-    <ngb-carousel *ngIf="images">
-      <ng-template ngbSlide >
-        <img [src]="imagesExcursion[0]" alt="Random first slide">
-        <div class="carousel-caption">
-          <h3>Relájate</h3>
-          <p>Te brindaremos unas vistas que harán olvidarte de los problemas.</p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <img [src]="imagesExcursion[1]" alt="Random second slide">
-        <div class="carousel-caption">
-          <h3>Descansa</h3>
-          <p>Dormirás como si estuvieras en una nube</p>
-        </div>
-      </ng-template>
-    </ngb-carousel>
-  </div>
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <img class="sameSize" [src]="imagesExcursion[0]" alt="Random first slide">
+      <div class="carousel-caption">
+        <h3>Relájate</h3>
+        <p>Te brindaremos unas vistas que harán olvidarte de los problemas.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img class="sameSize" [src]="imagesExcursion[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>Descansa</h3>
+        <p>Dormirás como si estuvieras en una nube</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
 <!-- <div class="margenExcursion">
   <img src="assets/img/excursion2.jpg">
 </div> -->
-<div class="margenes">
-  <h3 style="text-align: center" class="margen titulo">Para mas información contacte con nosotros por medio de correo
+<div style="background-color: #26272b; margin-top: 50px;">
+  <div class="row">
+
+  <h3 class="col-sm-12" style="text-align: center; color: white; margin-top: 50px;">Para mas información contacte con nosotros por medio de correo
     electrónico o teléfono</h3>
-  <div class="margenesBull">
-    <p>&bull;<strong>Correo electrónico: </strong>GestionHoteleraSevilla@gmail.com</p>
-    <p>&bull;<strong>Téfono de contacto: </strong>954787878</p>
   </div>
+  <div>
+    <div class="row" style="margin-top: 40px;">
+      <h6 class="col-sm-6" style="text-align: center; color: white;"><strong>Correo electrónico: </strong></h6>
+      <h6 class="col-sm-6" style="text-align: center; color: white;"><strong>Teléfono de contacto: </strong></h6>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+      <p class="col-sm-6" style="text-align: center; color: white; margin-bottom: 20px;" >&bull; GestionHoteleraSevilla@gmail.com</p>
+      <p class="col-sm-6" style="text-align: center; color: white; margin-bottom: 20px;" >&bull; 954787878</p>
+    </div>
+
+
+  </div>
+  <div class="col-sm-3"></div>
+  <div class="row" ></div>
+
 </div>

@@ -1,19 +1,54 @@
-<form enctype="multipart/form-data">
-  <div class="borde4">
-    <div class="margenes">
+<body>
+  <form #formAdd="ngForm" enctype="multipart/form-data" class="final2">
+    <div class="borde4">
+      <!-- <div class="margenes">
       <label><strong>Nombre de la habitación:</strong></label><br>
-      <input type="text" />
-    </div>
-    <div class="margenes">
+      <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="habitación.nombre" required pattern="[a-z A-Z]+">
+    </div> -->
+      <div class="  row margenes final2">
+        <div class="col-sm-3"></div>
+        <label class="col-sm-2 col-form-label"> <strong style="margin-right: 5px;">Nombre de la habitacio:
+          </strong></label>
+        <input class="col-sm-3" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="habitacion.nombre" required
+          required pattern="[a-z A-Z]+">
+        <br>
+        <span *ngIf="nombre.touched && !nombre.valid" class="error texto">
+          ¡Introduce un nombre para la habitacion por favor!
+        </span>
+
+      </div>
+
+      <div class=" row margenes final2">
+        <div class="col-sm-3"></div>
+        <label class="col-sm-2 col-form-label"> <strong style="margin-right: 5px;">Precio de la habitación:
+          </strong></label>
+        <input class="col-sm-3" type="text" name="precio" #precio="ngModel" [(ngModel)]="habitacion.precio" required
+          pattern=[0-9]+(\\.[0-9][0-9]?)?>
+        <br>
+        <span *ngIf="precio.touched && !precio.valid" class="error texto">
+          ¡Introduce un precio a la habitación por favor!
+        </span>
+      </div>
+
+      <!--   <div class="margenes">
       <label><strong>Precio:</strong></label><br>
-      <input type="text">
+      <input type="text" name="precio" #precio="ngModel" [(ngModel)]="habitación.precio" required pattern="[0-9]">
+    </div> -->
+      <div class=" row margenes final2">
+        <div class="col-sm-3"></div>
+        <label class="col-sm-2 col-form-label"><strong style="margin-right: 5px;">Insertar foto:</strong></label>
+        <input class="col-sm-3" name="img" #img="ngModel" required [(ngModel)]="habitacion.img" type="file" name="adjunto"
+          accept=".pdf,.jpg,.png" multiple>
+      </div>
+
     </div>
-    <div class="margenes">
-      <label class="margenLabel"><strong>Insertar foto:</strong></label>
-      <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple>
+    <div class="row">
+      <div class="col-sm-9"></div>
+    <button (click)="envio()" routerLinkActive="active" type="submit" class="letra color1 color2 prueba col-sm-2"
+      [routerLink]="['/resumen']" [disabled]="!formAdd.form.valid">Añadir
+      habitación</button>
+      <div class="col-sm-1"></div>
     </div>
-    <div>
-      <button (click)="envio()" routerLinkActive="active" type="submit" class="letra color1 color2 prueba" [routerLink]="['/resumen']" [disabled]="!formUltimo.form.valid">Añadir habitación</button>
-    </div>
-  </div>
-</form>
+
+  </form>
+</body>

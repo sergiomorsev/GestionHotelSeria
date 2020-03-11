@@ -1,9 +1,11 @@
- <div class="card animated fadeIn fast" >
-    <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+<!--  <div class="card animated fadeIn fast" >
+
+    
     <div class="card-body">
-      <h4 class="card-title">{{ heroe.nombre }}</h4>
-      <p class="card-text"> {{ heroe.bio }} </p>
-      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+      <h4 class="card-title medio">{{ habitacion2.nombre }}</h4>
+      <img class="card-img-top img-fluid" src="assets/img/habitacion2.jpg" alt="habitacion2.nombre">
+      <p class="card-text medio"> <Strong>{{ habitacion2.precio }}€</Strong> </p>
+    
   
       <button (click)="verHeroe()"
         type="button" class="btn btn-outline-primary btn-block">
@@ -12,7 +14,32 @@
      
   
     </div>
+  </div> -->
+
+<h1 class="margin">Reserva aquí</h1>
+<!-- <div class="row">
+  <div class="column">
+    <div class="card">
+      <div *ngFor="let habitacion of heroes" style="width: 20rem;">
+        <img class="card-img-top" [src]="habitacion.img" alt="Card image cap">
+        <h2 class="card-title">{{habitacion.nombre}}</h2>
+        <h4 class="card-text"><strong>{{habitacion.precio}}€</strong></h4>
+        <a href="#" [routerLink]="['/fecha', habitacion.id]" class="btn btn-primary">Ver tarifa...</a>
+      </div>
+    </div>
   </div>
+</div> -->
+<div class="card-columns margin">
+  <div class="card sombra" *ngFor="let habitacion of heroes;let i = index" style="width: 20rem; background-color: rgb(228, 252, 250); height: 500px;">
+    <img class="card-img-top" [src]="habitacion.img" alt="Card image cap">
+    <div class="card-body">
+      <h2 style="color: black;" class="tipo card-title">{{habitacion.nombre}}</h2>
+      <h4 style="color: black" class="card-text"><strong>{{habitacion.precio}}€</strong></h4>
+      <button  onClick ="pasarIndex(i)" routerLinkActive="active" class="letra color1 color2 prueba" [routerLink]="['/fecha', habitacion.id]"class="letra color1 color2 prueba btn-block" style="text-align: center;">Ver tarifa...</button>
+    </div>
+  </div>
+</div>
+
 
 <!-- <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="assets/img/aquaman.png" alt="Card image cap">

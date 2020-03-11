@@ -1,23 +1,70 @@
-<div class="card">
-  <div class="card-body">
-    <h6 class="text-center">
-      List of Products
-    </h6>
-    <table class="table table-sm table-hover">
+<div style="margin: 20px;" class="card border-primary mb-3">
+  <div style="background-color: rgb(252, 233, 230);" class="card-header"><strong>Clientes</strong></div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de clientes</h5>
+    <div class="my-2 text-left">
+      <!-- <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/clientes/form']">
+        Crear Cliente
+      </button> -->
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>nombre</th>
+          <th>apellido</th>
+          <th>contraseña</th>
+          <th>email</th>
+          <th>telefono</th>
+          <th>Tarjeta</th>
+          <th>eliminar</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr *ngFor="let product of productList">
-          <td>{{product.name}}</td>
-          <td>{{product.category}}</td>
+        <tr>
+          <td>1</td>
+          <td>Sergio</td>
+          <td>Moreno</td>
+          <td>quepasa</td>
+          <td>sergiomorsev1@gmail.com</td>
+          <td>692182886</td>
+          <td>5454545454545454</td>
+          
           <td>
-            <a class="btn btn-secondary text-white" (click)="onEdit(product)">
-                <i class="far fa-edit"></i>
-            </a>
-            <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
-                <i class="fas fa-trash-alt"></i>
-            </a>
+            <button type="button" name="eliminar" (click)='delete()'
+              class="btn btn-danger btn-sm">eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Angel</td>
+          <td>Rodriguez</td>
+          <td>pass2</td>
+          <td>angelrdr@gmail.com</td>
+          <td>692182856</td>
+          <td>5454545454545454</td>
+          
+          <td>
+            <button type="button" name="eliminar" (click)='delete()'
+              class="btn btn-danger btn-sm">eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Francisco</td>
+          <td>Toril</td>
+          <td>pass3</td>
+          <td>fran@gmail.com</td>
+          <td>692182854</td>
+          <td>5454545454545454</td>
+          
+          <td>
+            <button type="button" name="eliminar" (click)='delete()'
+              class="btn btn-danger btn-sm">eliminar</button>
           </td>
         </tr>
       </tbody>
     </table>
+
   </div>
 </div>

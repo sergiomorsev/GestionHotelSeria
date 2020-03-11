@@ -13,10 +13,11 @@ import { ConfirmarReservaComponent } from './component/confirmar-reserva/confirm
 import { PortadaAdministradorComponent } from './component/portada-administrador/portada-administrador.component';
 import { AddHabitacionComponent } from './component/add-habitacion/add-habitacion.component';
 import { EliminarHuespedComponent } from './component/eliminar-huesped/eliminar-huesped.component';
+import {EditarComponent} from './component/editar/editar.component'
 const APP_ROUTES: Routes = [
     { path: 'nosotros', component: NosotrosComponent },
-    { path: 'habitaciones', component: HabitacionesComponent },
-    { path: 'heroe/:id', component: HabitacionComponent },
+   // { path: 'habitaciones', component: HabitacionesComponent },
+    { path: 'fecha/:id', component: HabitacionComponent },
     { path: 'InicioSesion', component: RegistroComponent },
     { path: 'resumen', component: PortadaComponent },
     { path: 'fotos', component: FotosComponent },
@@ -28,6 +29,8 @@ const APP_ROUTES: Routes = [
     { path: 'ultimoPaso', component: UltimoPasoComponent },
     { path: 'admin', component: PortadaAdministradorComponent },
     { path: 'addHab', component: AddHabitacionComponent },
+    { path: 'editar', component: EditarComponent },
+    {path: 'editar/:id', component: EditarComponent },
     { path: 'EliminarHuesped', component: EliminarHuespedComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'resumen' }
 ];

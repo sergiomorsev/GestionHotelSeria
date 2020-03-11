@@ -94,13 +94,38 @@ img.tamaño{
     width: 42px;
     margin:10px 0px 0px 30px
 }
-button[disabled]{
+button.color1[disabled]{
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;
   }
-  button[disabled]:hover{
+  button.color2[disabled]:hover{
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;
   }
+  .derecha{
+      float: right
+  }
+  .holaaaa {
+      font-size: 0px;
+  }
+
+  .color2 {
+    color: #990033;
+
+   
+}
+button.color2:hover {
+    background: #F73E51;
+}
+.columnas1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+ 
+
+}
+.textSpace {
+    margin-right: 5px;
+}

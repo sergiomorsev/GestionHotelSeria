@@ -7,24 +7,55 @@ form {
   display: block;
   width: 290px;
   text-align: center;
+}
+.mid {
+  margin: auto;
+  float: center;
+  text-align: center;
+}
+.hola {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 0 4px 0 4px;
+}
+.color {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 0 4px 0 4px;
+  width: 200px;
+  height: 40px;
+}
 
+button.color1 {
+  color: #fff;
+  background: #990033;
 }
-.hola{
-    -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        padding: 0 4px 0 4px;
+button.color2:hover {
+  background: #f73e51;
 }
-.color{
-    -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        padding: 0 4px 0 4px;
-        width:200px; height:40px;
-    
+button[disabled]:hover {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
-.error{
-    color: red;
+button.color1[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
-
-
+.error {
+  color: red;
+}
+.medio {
+  margin: auto;
+  float: center;
+  padding: 2px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+.prueba {
+  font: bold 120% sans-serif;
+}

@@ -1,47 +1,55 @@
 <div>
-<form #formRegistro="ngForm" (ngSubmit)="onSubmit();" ><!--(ngReset)="formDatosUsuario.reset();"-->
+
+  <form #formCliente="ngForm" (ngSubmit)="onSubmit();">
+ 
 
   <h2 class="margenes">Rellena los datos</h2>
   <p>
     <label> <strong>NOMBRE:</strong></label>
-    <input class="hola" size="30" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="registro.nombre" required placeholder="Indica tu nombre (obligatorio)"
-      required pattern="[a-z A-Z]+">
+    <input class="hola" size="30" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="cliente.nombre" required
+      placeholder="Indica tu nombre (obligatorio)" required pattern="[a-z A-Z]+">
     <span *ngIf="nombre.touched && !nombre.valid" class="error">
       ¡Introduce un Nombre, por favor(solo letras)!
     </span>
   </p>
+  
   <p>
     <label> <strong>APELLIDO:</strong> </label>
-    <input class="hola"  size="30" placeholder="Indica tu apellido ( obligatorio)" type="text" name="apellido"
-      #apellido="ngModel" [(ngModel)]="registro.apellido" required pattern="[a-z A-Z]+">
+    <input class="hola" size="30" placeholder="Indica tu apellido ( obligatorio)" type="text" name="apellido"
+      #apellido="ngModel" [(ngModel)]="cliente.apellido" required pattern="[a-z A-Z]+">
     <span *ngIf="apellido.touched && !apellido.valid" class="error">
       ¡Introduce un apellido, por favor(solo letras)!
     </span>
   </p>
   <p>
-      <label> <strong>CONTRASEÑA:</strong> </label>
-      <input class="hola"  size="30" placeholder="Indica tu contraseña (obligatorio)" type="password" name="pass"
-        #pass="ngModel" [(ngModel)]="registro.pass" required pattern="[a-z A-Z0-9]+">
-      <span *ngIf="pass.touched && !pass.valid" class="error">
-        ¡Introduce una contraseña, por favor(solo letras)!
-      </span>
-    </p>
+    <label> <strong>CONTRASEÑA:</strong> </label>
+    <input class="hola" size="30" placeholder="Indica tu codigo (obligatorio)" type="password" name="codigo"
+      #codigo="ngModel" [(ngModel)]="cliente.codigo" required pattern="[a-z A-Z0-9]+">
+    <span *ngIf="codigo.touched && !codigo.valid" class="error">
+      ¡Introduce una codigo, por favor(solo letras)!
+    </span>
+  </p>
   <p>
-    <label><strong>CORREO:</strong> </label>
-    <input class="hola"  size="30" placeholder="Indica tu email ( obligatorio)" type="text" name="correo" #correo="ngModel"
-      [(ngModel)]="registro.correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-    <span *ngIf="correo.touched && !correo.valid" class="error">
+    <label><strong>EMAIL:</strong> </label>
+    <input class="hola" size="30" placeholder="Indica tu email ( obligatorio)" type="text" name="email"
+      #email="ngModel" [(ngModel)]="cliente.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+    <span *ngIf="email.touched && !email.valid" class="error">
       ¡Introduce un email, por favor. Ejemplo: ejemplo@gmail.com!
     </span>
   </p>
   <p>
     <label> <strong>TELEFONO:</strong></label>
-    <input class="hola"  size="30" placeholder="6xx-xx-xx-xx ( obligatorio)" type="text" name="telefono" #telefono="ngModel"
-      [(ngModel)]="registro.telefono" required pattern="[6][0-9]{8}">
+    <input class="hola" size="30" placeholder="6xx-xx-xx-xx ( obligatorio)" type="text" name="telefono"
+      #telefono="ngModel" [(ngModel)]="cliente.telefono" required pattern="[6][0-9]{8}">
     <span *ngIf="telefono.touched && !telefono.valid" class="error">
       ¡Introduce un telefono, por favor(empezando por el dígito 6)!
     </span>
   </p>
-  <input class="color"type="submit" value="Registro" [disabled]="!formRegistro.form.valid">
+  
 </form>
+  <button  routerLinkActive="active" class="color medio color1 color2 prueba" type="submit" [disabled]="!formCliente.form.valid"
+      (click)='callall()'>Registro</button>
+     <div class="mid">
+      <p>¿Ya tienes cuenta? <a [routerLink]="['/InicioSesion']">Loguearse</a></p>
+    </div>
 </div>

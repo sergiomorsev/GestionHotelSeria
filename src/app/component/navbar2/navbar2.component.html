@@ -1,22 +1,26 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-  
-        <!-- active -->
-        <li class="nav-item derecha" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['InicioSesion']"><u class="derecha">Iniciar sesión</u></a>
-        </li>
-        <li class="nav-item derecha" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['Registro']"><u class="derecha">Regístrate</u></a>
-          </li>
-         
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item pull-left" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['Reservar']"><button class="boton letra"><img src="assets/img/calendar.png" class="margen"/>Reserva Aquí</button></a>
-        </li>
-      </ul>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <!-- active -->
+      <li class="nav-item derecha" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['InicioSesion']"><u class="derecha">Iniciar sesión</u></a>
+      </li>
+      <li class="nav-item derecha" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['Registro']"><u class="derecha">Regístrate</u></a>
+      </li>
+
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item pull-left" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['habitaciones']"><button class="boton letra"><img src="assets/img/calendar.png"
+              class="margen" />Reserva Aquí</button></a>
+      </li>
+    </ul>
+  </div>
+</nav>

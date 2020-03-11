@@ -1,46 +1,56 @@
-.margenes{
-    width: 70%;
-    height: 800%;
-     margin: 20px 200px ; 
+.margenes {
+    text-align: center;    
+    
 }
-.margen{
-    margin: 20px 60px 20px 0px;
+.margen {
+  margin: 20px 60px 20px 0px;
+}
+.pics_in_a_row {
+    display: flex;
+  }
+.img1 {
+    flex:1.3444;
 }
 
-.margenFoto{
-    margin: 20px 60px 20px 150px;
+.margenFoto {
+  margin: 20px 60px 20px 150px;
 }
-.margenExcursion{
-
+.margenExcursion {
   text-align: center;
 }
-.titulo{
-    color: #9E64AB ;
-   
+.titulo {
+  color: #990033;
 }
-.color{
-color: #9CA0A6;
+.color {
+  color: #9ca0a6;
 }
-.margenesBull{
-    margin: 20px 100px 20px 300px;
+.margenesBull {
+  margin: 20px 100px 20px 300px;
 }
-.margenesPrincipal{
-   margin: 20px 80px 40px 80px;
+.margenesPrincipal {
+  margin: 20px 80px 40px 80px;
 }
-.SectionColumnasImg{
-    width: 100%;
-    margin:auto 
+.SectionColumnasImg {
+  width: 100%;
+  margin: auto;
 }
-.columnas{
-    width:33.333%;
-    float: left;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    margin:auto;
+.columnas {
+  width: 33.333%;
+  float: left;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  margin: auto;
 }
-.columnas img{
-    border-radius:150px;
-    width:300px;
-    height:300px;
-    margin: 100px;
+.columnas img {
+  border-radius: 150px;
+  width: 300px;
+  height: 300px;
+  margin: 100px;
 }
+
+.sameSize {
+  width: 1360px;
+  height: 768px;
+}
+
+

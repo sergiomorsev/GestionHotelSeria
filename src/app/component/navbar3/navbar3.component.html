@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-faded">
+<!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,5 +19,23 @@
       </div>
     </ul>
   </div>
-</nav>
+</nav> -->
 
+<body>
+  <div>
+    <h1 style="margin-top:30px; text-align: center;">¿Que desea Hacer?</h1>
+    <div>
+      <!-- Control the column width, and how they should appear on different devices -->
+      <div>
+        <div style="margin-top: 300px;" class="row">
+          <div class="col-sm-2"></div>
+          <button [routerLink]="['/addHab']" style="margin-bottom: 5px;" class="col-sm-3 letra color1 color2 prueba">Añadir una habitacion</button>
+          <div class="col-sm-2"></div>
+          <button [routerLink]="['/EliminarHuesped']" style="margin-top: 5px;" class="col-sm-3 letra color1 color2 prueba">Eliminar un
+            huésped</button>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
