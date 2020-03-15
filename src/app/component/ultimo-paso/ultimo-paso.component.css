@@ -40,6 +40,7 @@ border-top: 2px solid rgb(177, 174, 174);
 .hola{
    
     border: 2px solid rgb(177, 174, 174);
+    font-weight: bold;
 }
 .hola2{
     display:inline;

@@ -17,37 +17,35 @@ div{
     margin-top:50px;
 } */
 .margin {
-    margin: 20px;
+  margin-left: 180px;
 }
-.color{
-    background: #990033;
-    text-align: center;
-    
+.color {
+  background: #990033;
+  text-align: center;
 }
-.color1{
-    background: #ffffff;
-    text-align: center;
+.color1 {
+  background: #ffffff;
+  text-align: center;
 }
-.margenCalendario{
-    margin: 0px 50px;
+.margenCalendario {
+  margin: 0px 50px;
 }
-.color2{
-   color: #ffffff;
-   text-align: center;
+.color2 {
+  color: #ffffff;
+  text-align: center;
 }
 button.color1 {
-    border: 1px solid #990033;
-    color: #fff;
-    background: #990033;
-    padding: 5px 5px;
-    border-radius: 2px;
-   
+  border: 1px solid #990033;
+  color: #fff;
+  background: #990033;
+  padding: 5px 5px;
+  border-radius: 2px;
 }
 button.color2:hover {
-    background: #F73E51;
+  background: #f73e51;
 }
 .otro {
-    flex: 1.3334;
+  flex: 1.3334;
 }
 
 /* .tipo {
@@ -55,6 +53,6 @@ button.color2:hover {
 } */
 
 .sombra {
-    box-shadow: 4px 4px grey;
-    
+  box-shadow: 4px 4px grey;
+  margin-bottom: 50px;
 }

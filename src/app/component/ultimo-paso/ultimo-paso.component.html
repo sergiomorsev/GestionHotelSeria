@@ -1,4 +1,4 @@
-<div>
+<div style="margin-left: 75px; margin-bottom: 50px; margin-top: 50px;">
   <!--class="container" -->
   <div class="row">
     <div class="col-5">
@@ -49,18 +49,18 @@
 
         <h2 class="margenes">Tus datos</h2>
         <div class="row">
-          <p><strong class="nombreMargin">Nombre:</strong> <strong class="color2">Sergio</strong></p>
+          <p style="margin-left: 50px;"><strong class="nombreMargin">Nombre:</strong> <strong class="color2">Sergio</strong></p>
         </div>
         <div class="row">
-          <p><strong class="nombreMargin">E-mail:</strong> <strong class="color2">sergiomorsev1@gmail.com</strong></p>
+          <p style="margin-left: 50px;"><strong class="nombreMargin">E-mail:</strong> <strong class="color2">sergiomorsev1@gmail.com</strong></p>
         </div>
         <div class="borde1">
           <h2 class="margenes">Garantía de la reserva</h2>
         </div>
-        <div class="container">
-          <div class="col-6">
+        <div>
+          <!-- <div class="col-6"> -->
             <div class="row">
-              <p>
+              <p style="margin-left: 50px;">
                 <label> <strong>Nº de la tarjeta de credito: </strong></label>
                 <input class="hola margenes" #tarjeta name="tarjeta" #tarjeta="ngModel" [(ngModel)]="cliente2.tarjeta"
                   [textMask]="mask" type="text" required pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" maxlength="90"
@@ -73,7 +73,7 @@
               </p>
             </div>
           </div>
-        </div>
+       <!--  </div> -->
       </form>
       <button routerLinkActive="active" type="submit" class="letra color1 color2 prueba"
         (click)='envio()' [disabled]="!formUltimo.form.valid"> Último paso</button>

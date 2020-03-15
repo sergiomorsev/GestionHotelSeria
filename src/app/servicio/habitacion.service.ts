@@ -48,7 +48,7 @@ export class HabitacionService {
     },
     {
       id:6,
-      nombre: "Habitacion Estándar",
+      nombre: "Suite Estándar",
       bio:
         "Suite de 1 dormitorio(s), Camas: 2 Pequeñas, Vista a la ciudad, Baño compartido",
       img: "assets/img/habitacion2.jpg",
@@ -56,7 +56,7 @@ export class HabitacionService {
     },
     {
       id:7,
-      nombre: "Habitacion Gran Deluxe",
+      nombre: "Suite Gran Deluxe",
       bio: "Suite de 1 dormitorio(s), Camas: 2 Pequeñas, Vista a la giralda",
       img: "assets/img/habitacion3.jpg",
       precio: 150
@@ -67,7 +67,14 @@ export class HabitacionService {
       bio: "",
       img: "assets/img/habitacion.jpg",
       precio: 150
-    }
+    },
+    {
+      id:9,
+      nombre: "Suite presidencial",
+      bio: "Camas: 1 Grande,Vistas a la Giralda",
+      img: "assets/img/habitacion2.jpg",
+      precio: 150
+    },
   ];
 
   constructor() {

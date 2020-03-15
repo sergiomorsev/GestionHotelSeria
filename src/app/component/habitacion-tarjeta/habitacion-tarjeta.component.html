@@ -16,7 +16,7 @@
     </div>
   </div> -->
 
-<h1 class="margin">Reserva aquí</h1>
+<h1 style="margin-top: 50px; margin-bottom: 50px; text-align: center;">Reserva aquí</h1>
 <!-- <div class="row">
   <div class="column">
     <div class="card">
@@ -34,10 +34,13 @@
     <img class="card-img-top" [src]="habitacion.img" alt="Card image cap">
     <div class="card-body">
       <h2 style="color: black;" class="tipo card-title">{{habitacion.nombre}}</h2>
-      <h4 style="color: black" class="card-text"><strong>{{habitacion.precio}}€</strong></h4>
+      <h4 style="color: black;" class="card-text"><strong>{{habitacion.precio}}€</strong></h4>
       <button  onClick ="pasarIndex(i)" routerLinkActive="active" class="letra color1 color2 prueba" [routerLink]="['/fecha', habitacion.id]"class="letra color1 color2 prueba btn-block" style="text-align: center;">Ver tarifa...</button>
     </div>
   </div>
+</div>
+<div style=" margin-bottom: 50px;" class="row">
+
 </div>
 
 

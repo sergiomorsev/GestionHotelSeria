@@ -1,4 +1,4 @@
-td{
+/* td{
     font-size: 15px;
     line-height: 20px;
     padding: 0 20px;
@@ -7,11 +7,14 @@ td{
     width: 20%;
     font: small-caps 100%/200% serif;
 }
-td.linea{
+.linea{
     border-right: 1px solid #9E64AB  ;
 }
 h2{
     text-align: center;
     font-family: cursive;
     margin-top: 50px;
+} */
+.linea{
+    border-right: 1px solid #9E64AB  ;
 }
