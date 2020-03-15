@@ -3,7 +3,7 @@
   <form #formCliente="ngForm" (ngSubmit)="onSubmit();">
  
 
-  <h2 class="margenes">Rellena los datos</h2>
+  <h2 style="margin-top: 70px;" class="margenes">Rellena los datos</h2>
   <p>
     <label> <strong>NOMBRE:</strong></label>
     <input class="hola" size="30" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="cliente.nombre" required
@@ -50,6 +50,6 @@
   <button  routerLinkActive="active" class="color medio color1 color2 prueba" type="submit" [disabled]="!formCliente.form.valid"
       (click)='callall()'>Registro</button>
      <div class="mid">
-      <p>¿Ya tienes cuenta? <a [routerLink]="['/InicioSesion']">Loguearse</a></p>
+      <p style="margin-top: 10px;">¿Ya tienes cuenta? <a [routerLink]="['/InicioSesion']">Loguearse</a></p>
     </div>
 </div>
